@@ -1,5 +1,7 @@
-import Head from 'next/head'
+
 import React from 'react';
+import Header from '../components/Header';
+import Usage from '../components/Usage';
 
 type Props = { };
 type State = { 
@@ -75,23 +77,19 @@ class Home extends React.Component<Props, State> {
 
     return (
       <div className='container mx-auto'>
-        <Head>
-          <title>Obsidian Clipper</title>
-          <link rel="icon" href="/images/favicon.png" />
-          <meta name="description" content="Make Obsidian Clipper or Bookmark"></meta>
-        </Head>
-  
+        
+        <Header />
         <div className='flex-col min-h-screen justify-around'>
           <div className='mt-5 mb-10'>
             <h1 className="text-3xl text-center font-bold text-obsidianInteractive"> Obsidian Clipper Maker </h1>
-            <h2 className='text-center text-slate-400 italic'> Make your own Obsidian Clipper</h2>
+            <h2 className='text-center text-slate-500 italic'> Make your own Obsidian Clipper</h2>
           </div>
-          <div className='flex'>
-            <div className='flex-col mx-5 lg:w-1/3'>
+          <div className='md:flex'>
+            <div className='flex-col mx-5 w-full md:w-1/3'>
               <div className='my-5'>
                 <label htmlFor='title' className='inline-block'>Clipper Name</label>
                 <div className='inline-block' title='Name of your Clipper'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -99,14 +97,14 @@ class Home extends React.Component<Props, State> {
                     type='text'
                     name='title'
                     onChange={e => this.setState({title: e.target.value})}
-                    className="my-2 placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
+                    className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
                     value={this.state.title}
                     placeholder="My Clipper" />
               </div>
               <div className='my-5'>
                 <label htmlFor='vault' className='inline-block'>Vault Name</label>
                 <div className='inline-block' title='Name of the Vault to which clipped data should be copied to.'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -114,14 +112,14 @@ class Home extends React.Component<Props, State> {
                     type='text'
                     name='vault'
                     onChange={e => this.setState({vault: e.target.value})}
-                    className="my-2 placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
+                    className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
                     value={this.state.vault}
-                    placeholder="" />
+                    placeholder="Vault name" />
               </div>
               <div className='my-5'>
-                <label htmlFor='folder' className='inline-block'>Folder Name <span className='text-slate-400 text-sm'>(Optional)</span></label>
+                <label htmlFor='folder' className='inline-block'>Folder Name <span className='text-slate-500 text-sm'>(Optional)</span></label>
                 <div className='inline-block' title='Name of the Folder under which clipped data should be placed.'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -129,14 +127,14 @@ class Home extends React.Component<Props, State> {
                     type='text' 
                     name='folder' 
                     onChange={e => this.setState({folder: e.target.value})}
-                    className="my-2 placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
+                    className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
                     value={this.state.folder}
-                    placeholder="" />
+                    placeholder="Folder name" />
               </div>
               <div className='my-5'>
-                <label htmlFor='tags' className='inline-block'>Tags <span className='text-slate-400 text-sm'>(Optional)</span></label>
+                <label htmlFor='tags' className='inline-block'>Tags <span className='text-slate-500 text-sm'>(Optional)</span></label>
                 <div className='inline-block' title='List of tags to be included in the new page.'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 inline-block h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -144,7 +142,7 @@ class Home extends React.Component<Props, State> {
                     type='text'
                     name='tags'
                     onChange={e => this.setState({tags: e.target.value})}
-                    className="my-2 placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm" 
+                    className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm" 
                     value={this.state.tags}
                     placeholder="Comma separated values" />
               </div>
@@ -156,11 +154,11 @@ class Home extends React.Component<Props, State> {
                 </button>
               </div>
             </div>
-            <div className='flex-col mx-5 my-5 lg:w-2/3'>
+            <div className='flex-col mx-5 my-5 w-full md:w-2/3'>
               <label className='flex-none' htmlFor='tags'>Generated Javascript Clipper</label>
               <textarea disabled 
                   placeholder='Generated javascript code appears here'
-                  className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-400 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
+                  className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-500 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
                   value={this.state.bookmarklet}>
               </textarea>
               <div className='my-5 flex'>
@@ -173,7 +171,7 @@ class Home extends React.Component<Props, State> {
               <label className='flex-none' htmlFor='tags'>Generated HTML Clipper</label>
               <textarea disabled 
                   placeholder='Generated HTML code appears here'
-                  className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-400 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
+                  className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-500 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
                   value={this.state.htmlBookmarklet}>
               </textarea>
               <div className='my-5 flex'>
@@ -185,24 +183,19 @@ class Home extends React.Component<Props, State> {
               </div>
               <div>
                 { this.state.bookmarklet !== '' && 'Drag and drop the following text to the Bookmark/Favorites Bar:' }
-                <span className={this.state.bookmarklet ? 'mx-2 rounded border border-purple-600 bg-purple-300 border-1 px-2 py-1': ''}>
-                  <a ref={this.anchor}></a>
-                </span>
+                { this.state.bookmarklet !== '' &&
+                  <span className={this.state.bookmarklet ? 'mx-2 rounded border border-purple-600 bg-purple-300 border-1 px-2 py-1': ''}>
+                    <a ref={this.anchor}></a>
+                  </span>
+                }
               </div>
             </div>
           </div>
           <div className='border rounded mt-5 p-3'>
-            <h3 className='text-xl text-obsidianInteractive mb-1'>How to use?</h3>
-            <ul>
-              <li>• Enter Clipper name, Vault name, Folder name(optional) and comma separated values for tags(optional).</li>
-              <li>• Click <b>Generate</b> button</li>
-              <li>• In browser, drag the genearted clipper(name of the clipper, surrounded in bright purple background) from the right side and drop it in your bookmark/favorties bar.</li>
-              <li>• In browser, to update a clipper, right click the item on the bookmark/favorites bar and replace the url with the genearted Javascript code. You can use the <b>Copy JS Clipper</b> button.</li>
-              <li>• To embed a link in another web page, use the generated HTML code. You can use the <b>Copy HTML Clipper</b> button.</li>
-            </ul>
+            <Usage />
           </div>
 
-          <div className='my-10 flex justify-center content-center text-xs text-slate-400'>
+          <div className='my-10 flex justify-center content-center text-xs text-slate-500'>
             <div>
               Created by&nbsp;
               <a href='https://twitter.com/ganesshkumar' rel='noreferrer' target='_blank' className='underline'>ganesshkumar</a>
