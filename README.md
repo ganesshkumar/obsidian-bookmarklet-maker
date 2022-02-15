@@ -6,6 +6,8 @@ A WebApp to make Obsidian Clippers or Bookmarklets - to capture webpages or data
 
 ## Demo
 
+![Demo](https://user-images.githubusercontent.com/2135089/154160211-749389b8-cb04-44b8-b0b9-be0270e84cf8.gif)
+
 #### Generate Clipper
 
 1. Visit [Obsidian Clipper Maker](https://obsidian-clipper-maker.ganesshkumar.com).
