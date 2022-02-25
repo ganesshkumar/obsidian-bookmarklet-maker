@@ -119,6 +119,7 @@ class Home extends React.Component<Props, State> {
                 </div>
                 <input
                     type='text'
+                    id='title'
                     name='title'
                     onChange={e => this.setState({title: e.target.value})}
                     className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
@@ -134,6 +135,7 @@ class Home extends React.Component<Props, State> {
                 </div>
                 <input
                     type='text'
+                    id='vault'
                     name='vault'
                     onChange={e => this.setState({vault: e.target.value})}
                     className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
@@ -149,6 +151,7 @@ class Home extends React.Component<Props, State> {
                 </div>
                 <input 
                     type='text' 
+                    id='folder'
                     name='folder' 
                     onChange={e => this.setState({folder: e.target.value})}
                     className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm"
@@ -164,6 +167,7 @@ class Home extends React.Component<Props, State> {
                 </div>
                 <input 
                     type='text'
+                    id='tags'
                     name='tags'
                     onChange={e => this.setState({tags: e.target.value})}
                     className="my-2 placeholder:italic placeholder:text-slate-500 block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1 sm:text-sm" 
@@ -179,8 +183,8 @@ class Home extends React.Component<Props, State> {
               </div>
             </div>
             <div className='flex-col mx-5 my-5 w-full md:w-2/3'>
-              <label className='flex-none' htmlFor='tags'>Generated Javascript Clipper</label>
-              <textarea disabled 
+              <label className='flex-none' htmlFor='generated-js'>Generated Javascript Clipper</label>
+              <textarea disabled id='generated-js'
                   placeholder='Generated javascript code appears here'
                   className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-500 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
                   value={this.state.bookmarklet}>
@@ -192,8 +196,8 @@ class Home extends React.Component<Props, State> {
                   {this.state.copyText}
                 </button>
               </div>
-              <label className='flex-none' htmlFor='tags'>Generated HTML Clipper</label>
-              <textarea disabled 
+              <label className='flex-none' htmlFor='generated-html'>Generated HTML Clipper</label>
+              <textarea disabled id='generated-html'
                   placeholder='Generated HTML code appears here'
                   className='mt-2 px-3 w-full placeholder:italic placeholder:text-slate-500 border border-slate-300 rounded-md focus:outline-none focus:border-obsidianText focus:ring-obsidianInteractiveHover focus:ring-1'
                   value={this.state.htmlBookmarklet}>
