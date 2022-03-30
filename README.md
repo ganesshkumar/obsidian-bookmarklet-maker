@@ -3,6 +3,10 @@
 A WebApp to make Obsidian Clippers or Bookmarklets - to capture webpages or data from the web.
 
 [![MIT License](https://img.shields.io/github/license/ganesshkumar/obsidian-bookmarklet-maker)](LICENSE)
+![Maintainability](https://img.shields.io/codeclimate/maintainability-percentage/ganesshkumar/obsidian-bookmarklet-maker)
+![Code Issues](https://img.shields.io/codeclimate/issues/ganesshkumar/obsidian-bookmarklet-maker?label=code%3Aissues)
+![Tech Debt](https://img.shields.io/codeclimate/tech-debt/ganesshkumar/obsidian-bookmarklet-maker)
+
 
 ## Demo
 
